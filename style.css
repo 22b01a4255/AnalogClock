@@ -1,0 +1,86 @@
+/* General body styling */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #092178;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+}
+
+header {
+    text-align: center;
+    margin-top: 58px; /* Adds space at the top */
+    margin-bottom: 115px; /* Increases the gap between the heading and the container */
+}
+
+.main-heading {
+    color: #ffffff;
+    font-size: 32px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional shadow for better visibility */
+    margin: 0; /* Removes default margin around the heading */
+}
+
+/* Main container styling */
+.container {
+    display: flex;
+    justify-content: center; /* Centers the clock and quote horizontally */
+    align-items: center;
+    gap: 70px; /* Adds space between clock and quote */
+    margin-top: 30px; /* Space between the heading and the clock/quote */
+    flex-wrap: wrap; /* Ensures responsiveness for smaller screens */
+}
+
+/* Clock container styling */
+.clock {
+    width: 370px;
+    height: 370px;
+    background-image: url('clock.png'); /* Replace with your clock image */
+    background-size: cover;
+    border-radius: 45%;
+    position: relative;
+}
+
+/* General clock hands styling */
+.clock div {
+    position: absolute;
+    bottom: 48.5%;
+    left: 51%;
+    transform-origin: bottom center;
+    transform: translateX(-50%);
+    transition: transform 0.05s ease-in-out;
+}
+
+/* Hour hand */
+.hour-hand {
+    width: 6px;
+    height: 60px;
+    background-color: black;
+    z-index: 3;
+}
+
+/* Minute hand */
+.minute-hand {
+    width: 4px;
+    height: 80px;
+    background-color: gray;
+    z-index: 2;
+}
+
+/* Second hand */
+.second-hand {
+    width: 2px;
+    height: 100px;
+    background-color: red;
+    z-index: 1;
+}
+
+/* Quote styling */
+.quote {
+    color: white;
+    font-size: 28.5px;
+    font-style: serif;
+    line-height: 1.5;
+    max-width: 400px;
+    text-align: left;
+}
